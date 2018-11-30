@@ -24,6 +24,7 @@ service.interceptors.request.use(
 );
 
 // 添加响应拦截器
+// 根据返回的值进行处理
 service.interceptors.response.use(
   response => {
     const res = response.data;
@@ -39,9 +40,17 @@ service.interceptors.response.use(
         message: res.message
       })
     }
+    Message({
+      type: "warning",
+      message: res.message
+    })
     return Promise.reject(res.message)
   },
   err => {
+    Message({
+      type: 'error',
+      message: err.message
+    })
     return Promise.reject(err)
   }
 );
