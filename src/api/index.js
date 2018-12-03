@@ -9,12 +9,18 @@ export function loginByUsername(username,password) {
   })
 }
 
-// export function test(params) {
-//   return service({
-//     url : 'eeeee',
-//     method: 'post'
-//   })
-// }
+/**
+ * @type {Function | Ajax}
+ * @desc 获取用户菜单权限
+ * @param {String | Number} userId
+ * @return Promise
+ */
+export function userMenuTree (userId) {
+	return request({
+		url: process.env.BASE_API + server_api + '/menu/findTreeByUser/' + userId,
+		method: 'post'
+	})
+}
 
 export function test(params){
   return service({
