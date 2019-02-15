@@ -3,10 +3,10 @@ import Router from 'vue-Router'
 
 Vue.use(Router)
 
-const routes = [
+const constanRouterMap = [
   {
     path: '/login',
-    component: ()=>import('@/views/login')
+    component: ()=>import('@/views/login') 
   },
   {
     path: '/',
@@ -14,6 +14,14 @@ const routes = [
   }
 ]
 
+const asyncRouterMap = [
+  {
+    path: '/order',
+    component: ()=>import('@/views/order') //路由懒加载
+  }
+]
+
 export default  new Router({
-  routes,
+  routes: constanRouterMap,
+  mode: 'history'
 })

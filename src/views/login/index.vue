@@ -30,6 +30,8 @@ export default {
       this.$store.dispatch('LoginByUsername',{
         username: this.form.username,
         password: this.form.password
+      }).then(res=>{
+        this.$router.push('/')
       })
     },
     test(){

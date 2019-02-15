@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(Element)
 import store from './store'
 
+import './permission'
+
 Vue.config.productionTip = false
 
 
