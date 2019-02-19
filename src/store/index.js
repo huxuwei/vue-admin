@@ -16,6 +16,7 @@ const store = new Vuex.Store({
 		SET_TOKEN(state,str){
 			console.log(str)
 			state.token = str
+			localStorage.setItem('TOKEN',str)
 		}
 	},
 	actions:{

@@ -11,6 +11,10 @@ const constanRouterMap = [
   {
     path: '/',
     component: ()=>import('@/views/layout')
+  },
+  {
+    path: '/order',
+    component: ()=>import('@/views/order') //路由懒加载
   }
 ]
 
