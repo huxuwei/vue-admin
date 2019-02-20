@@ -27,5 +27,6 @@ const asyncRouterMap = [
 
 export default  new Router({
   routes: constanRouterMap,
-  mode: 'history'
+  mode: 'history',
+  linkActiveClass: 'actived'
 })
